@@ -1,33 +1,23 @@
-import { useState } from "react";
-import "./App.css";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
-//Import Pages
-import Home from "./pages/Home.jsx";
-import Success from "./pages/Success.jsx";
-import NotFound from "./pages/NotFound.jsx";
-
-function App() {
+import React from 'react'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import Home from './Pages/Home/Home';
+import NotFound from './Pages/NotFound/NotFound';
+import Success from './Pages/Success/Success';
+import './App.css'
+const App = () => {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/success" element={<Success />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path='/' element={<Home/>}/>
+          <Route path='/success' element={<Success/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          pauseOnHover
-          draggable
-        />
+        <Toaster/>
       </Router>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

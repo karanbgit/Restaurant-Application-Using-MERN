@@ -1,16 +1,14 @@
 import mongoose from "mongoose";
 
-const dbConnection = () => {
+export const dbConnection = () => {
   mongoose
-    .connect(process.env.MONGODB_URL, {
+    .connect(process.env.MONGO_URI, {
       dbName: "RestaurantApplication",
     })
     .then(() => {
-      console.log("Database connected successfully");
+      console.log("Connected to database!");
     })
     .catch((err) => {
-      console.log("Database connection failed", err);
+      console.log(`Some error occured while connecing to database: ${err}`);
     });
 };
-
-export default dbConnection;
