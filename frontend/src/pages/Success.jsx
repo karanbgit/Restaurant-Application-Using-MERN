@@ -22,7 +22,8 @@ const Success = () => {
     <>
       <section className="notFound">
         <div className="container">
-          <img src="/sandwich.png" alt="success" />
+          <img src="/sandwich.png" style={{width:500}} alt="success" />
+          <h1>Successfully Reservation</h1>
           <h1>Redirecting to Home in {countdown} seconds...</h1>
           <Link to={"/"}>
             Back to Home <HiOutlineArrowNarrowRight />
