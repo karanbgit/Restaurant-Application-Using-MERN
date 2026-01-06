@@ -19,7 +19,7 @@ const Footer = () => {
             <p>Developed By Karan Barale</p>
           </div>
           <div className="right">
-            <p>All Rights Reserved By Hotel Parakh Restaurant.</p>
+            <p>All Rights Reserved By @Hotel Parakh Restaurant.</p>
           </div>
         </div>
       </div>
