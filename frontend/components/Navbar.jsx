@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="logo">FOOD</div>
+        <div className="logo">PARAKH</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
             {data[0].navbarLinks.map((element) => (
